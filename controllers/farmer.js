@@ -2,11 +2,7 @@ const Farmer = require("../models/farmer");
 exports.getFarmers = async (req, res, next) => {
   try {
     const farmers = await Farmer.findAll();
-    // if (farmers?.length < 1) {
-    //     res.status(404).json({
-    //       msg: "Farmer isn't found",
-    //     });
-    //   }
+  
     res.status(200).json(farmers);
   
   } catch (e) {

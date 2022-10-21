@@ -1,4 +1,4 @@
-const {body, validationResult} = require('express-validator/check')
+const {body, validationResult} = require('express-validator')
 
 exports.productValidation=[
     body('name').trim()
